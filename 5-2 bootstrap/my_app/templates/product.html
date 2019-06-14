@@ -1,0 +1,24 @@
+{% extends 'home.html' %}
+{% from '_helpers.html' import render_field %}
+
+{% block container %}
+    <div class="top=pad">
+        <h4>{{ full_name(product) }}</h4>
+        <h5>{{ half_name(product) }}</h5>
+        <h6>{{ product|full_name }}</h6>
+        <h1>{{ product['name'] }}
+            <small>{{ product['category'] }}</small>
+        </h1>
+        <h3>$ {{ product['price'] }}</h3> 
+        <h3>$ {{ product['price']|format_currency }}</h3> 
+        <fieldset>
+            {{ render_field('username', 'icon-user') }}
+            {{ render_field('password', 'icon-key', type='password') }}
+        </fieldset>
+        
+        
+        <p>Current time: {{ momentjs(timestamp).calendar() }}</p>
+        
+        
+    </div>
+{% endblock %}   

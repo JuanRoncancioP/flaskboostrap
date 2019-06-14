@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Example Flask Boostrap Jinja2</title>
+    <meta charset = "UTF-8">
+    <meta name="viewport" conten = "width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <link rel="stylesheet" type="text/css" href="D:\python proyects\flasklearning\5-1 bootstrap\my_app\static/css/bootstrap.css"> 
+    
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ url_for('product.home') }}">Ejemplo boostrap jinja2</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% block container %}{% endblock %}
+        <br>
+        <br>
+        <div class = "btn-group tn-group-primary  align-center">
+                <button class="btn btn-primary">Opcion 1</button>
+                <button class="btn btn-primary">Opcion 2</button>
+                <button class="btn btn-primary">Opcion 3</button>
+        
+            </div>
+    </div>    
+    
+    
+    
+
+
+    <script scr="D:\python proyects\flasklearning\5-1 bootstrap\my_app\static/js/jquery-3.3.1.slim.min.js"> </script>
+    <script scr="D:\python proyects\flasklearning\5-1 bootstrap\my_app\static/js/popper.min.js"> </script>
+    <script scr="D:\python proyects\flasklearning\5-1 bootstrap\my_app\static/js/bootstrap.min.js"> </script>
+    </body>
+</html>

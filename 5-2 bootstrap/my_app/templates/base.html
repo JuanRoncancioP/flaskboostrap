@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Example Flask Boostrap Jinja2</title>
+    {{ moment.include_jquery() }}
+    {{ moment.include_moment() }}
+    <meta charset = "UTF-8">
+       
+   <!-- 
+    <link rel="stylesheet" type="application/x-css" href="{{ url_for('static', filename = 'css/bootstrap.css' ) }}"> 
+    <link rel="stylesheet" type="application/x-css" href="{{ url_for('static', filename = 'css/bootstrap.min.css' ) }}"> 
+    <link rel="stylesheet" type="application/x-css" href="{{ url_for('static', filename = 'css/main.css' ) }}"> 
+
+-->
+    <meta name="viewport" conten = "width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/bootstrap.css' ) }}"> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/bootstrap.min.css' ) }}"> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/main.css' ) }}"> 
+
+   
+    
+
+    
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ url_for('product.home') }}">Ejemplo boostrap jinja2</a>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% block container %}{% endblock %}
+        <!--
+        <br>
+        <br>
+        <div class = "btn-group btn-group-primary  align-center">
+                <button class="btn btn-primary">Opcion 1</button>
+                <button class="btn btn-primary">Opcion 2</button>
+                <button class="btn btn-primary">Opcion 3</button>
+        
+            </div>
+            -->
+    </div>    
+    
+    <script scr="{{ url_for('static', filename = 'js/jquery-3.3.1.slim.min.js' ) }} "> </script>
+    <script scr="{{ url_for('static', filename = 'js/popper.min.js' ) }} "> </script>
+    <script scr="{{ url_for('static', filename = 'js/bootstrap.min.js' ) }} "> </script>
+    <script scr="{{ url_for('static', filename = 'js/moment.js' ) }} "> </script>
+    <script scr="{{ url_for('static', filename = 'js/moment.min.js' ) }} "> </script>
+    
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block container %}
+    <div class = "top-pad">
+        {% for id, product in products.items() %}
+        <div class="well">
+            <h2>
+                <a class = "btn btn-primary btn-round" class href="{{ url_for('product.product', key=id) }}"> 
+                    {{ product ['name'] }}</a>
+                    <!--<small>$ {{ product['price'] }}</small> -->
+            </h2>
+        </div>
+        {% endfor %}
+    </div>
+    <div class = "btn-group btn-group-round">
+        {% for id, product in products.items() %}
+            <a type="button" class = "btn btn-primary btn-round" href="{{ url_for('product.product', key=id) }}">
+                {{ product ['name'] }} 
+            </a>
+                    <!--<small>$ {{ product['price'] }}</small> -->
+        {% endfor %}
+    </div>
+{% endblock %}
